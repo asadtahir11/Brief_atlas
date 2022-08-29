@@ -1,16 +1,17 @@
-<ul class="nav flex-column">
-    <li class="nav-item">
-        <a  routerLink="orders" 
-            routerLinkActive="active" 
-            class="nav-link">Orders</a>
-    </li>
-    <li class="nav-item">
-        <a  routerLink="clients" 
-            routerLinkActive="active" 
-            class="nav-link">Clients</a>
-    </li>
-    <li class="nav-item">
-        <button (click)="onClickIncrement()" >Increment V</button>
-    </li>
+<div class="container">
+<ul class="nav flex-column" *ngIf="collection$ | async as collection">
+  <li class="nav-item">
+      <form>
+        <select size="1">
+        <option *ngFor="let item of collection">{{item.name}}
+        </select>
+      </form>
+  </li>
+  <li class="nav-item">
+      <p>description</p>
+      <p *ngFor="let item of collection"> {{item.description}}</p>
+  </li>
 </ul>
+<app-info-conf></app-info-conf>
+</div>
 

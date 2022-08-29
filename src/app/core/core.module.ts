@@ -1,31 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginModule } from '../login/login.module';
+import { ResultModule } from '../function-result/result.module';
 import { UiModule } from '../ui/ui.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { IconsModule } from '../icons/icons.module';
-import { FooterComponent } from './components/footer/footer.component';
+import { FilterBarComponent } from './components/filter-bar/filter-bar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
+import { FunctionParamModule } from '../function-param/function-param.module';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    FooterComponent,
+    FilterBarComponent,
     HeaderComponent,
     NavComponent
   ],
   imports: [
     CommonModule, 
-    RouterModule
+    RouterModule,
+    FunctionParamModule
   ],
   exports: [
-    LoginModule,
+    ResultModule,
     UiModule,
     TemplatesModule,
     IconsModule,
-    FooterComponent,
+    FunctionParamModule,
+    FilterBarComponent,
     HeaderComponent,
     NavComponent
   ]

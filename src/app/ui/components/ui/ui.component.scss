@@ -2,7 +2,7 @@
 /// Description design of user interface
 header {
   height: 65px;
-  background: var(--app-light);
+  background: var(--app-b);
   padding: 0 $gutter;
   display: flex;
   align-items: center;
@@ -13,8 +13,8 @@ main {
   padding-top: 65px;
 }
 aside {
-  background: var(--app-darklight2);
-  width: 250px;
+  background: var(--app-b-light);
+  width: 350px;
   min-height: 100vh;
   position: fixed;
   z-index: 1000;
@@ -46,7 +46,8 @@ aside {
 .contents {
   flex-grow: 1;
 }
-footer {
+
+.filter-bar {
   background: var(--app-light);
 }
 @media (min-width: $md-breakpoint) {
@@ -54,11 +55,11 @@ footer {
     display: none;
   }
   .contents,
-  footer {
-    margin-left: 250px;
+  .filter-bar {
+    margin-left: 350px;
   }
   .close-aside .contents,
-  .close-aside footer {
+  .close-aside .filter-bar {
     margin-left: 0;
   }
 }
