@@ -10,5 +10,111 @@
       "name": "infoConf",
       "description":"information sur les configurations"
     }
+  ],
+  "infoServer": [
+    {
+      "applivspe": "ADOISDFDSFU938493",
+      "serveur":"eurosdfbsomd093"
+    },
+    {
+      "applivspe": "ADOISDFDSFU938493",
+      "serveur":"eusdfsdrobsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSU938493",
+      "serveur":"eursdfsdobsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSDFU938493",
+      "serveur":"eurosdfsdbsomd093"
+    },
+    {
+      "applivspe": "ADOIUSDFSF938493",
+      "serveur":"eurosdfdsbsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSDFU938493",
+      "serveur":"eusdfsdfrobsomd093"
+    },
+    {
+      "applivspe": "ADOSDFSDFIU938493",
+      "serveur":"eurobssdffdomd093"
+    },
+    {
+      "applivspe": "ADOSDFDSFIU938493",
+      "serveur":"eurosdfsdfsomd093"
+    },
+    {
+      "applivspe": "ADOIUSDFSD938493",
+      "serveur":"eusdfrgrerobsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSU938493",
+      "serveur":"euroergrebsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSDFU938493",
+      "serveur":"euroqsdbsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSDU938493",
+      "serveur":"eurohegregbsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSFU938493",
+      "serveur":"eurqfqsobsomd093"
+    },
+    {
+      "applivspe": "ADOIUSDFSDF938493",
+      "serveur":"eurobzgrgsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSU938493",
+      "serveur":"eurobsgzrgsomd093"
+    },
+    {
+      "applivspe": "ADOIU9SDFS38493",
+      "serveur":"eurobsdfsdfsomd093"
+    },
+    {
+      "applivspe": "ADOIU9SDFDSF38493",
+      "serveur":"eurogergbsomd093"
+    },
+    {
+      "applivspe": "ADOISDFU938493",
+      "serveur":"eurobgregsomd093"
+    },
+    {
+      "applivspe": "ADOISDFSDFU938493",
+      "serveur":"eurqfdsfobsomd093"
+    },
+    {
+      "applivspe": "ADOSDFSDFSIU938493",
+      "serveur":"eurgegerobsomd093"
+    },
+    {
+      "applivspe": "ADSDFSDFOIU938493",
+      "serveur":"eursdfsdfobsomd093"
+    },
+    {
+      "applivspe": "ADOSDFSFIU938493",
+      "serveur":"eurogergrebsomd093"
+    },
+    {
+      "applivspe": "ADOSDFDSFIU938493",
+      "serveur":"eursdfdsfobsomd093"
+    },
+    {
+      "applivspe": "ADOISDFDSFU938493",
+      "serveur":"eurogergebsomd093"
+    },
+    {
+      "applivspe": "ADOSDFSDFIU938493",
+      "serveur":"eusdfsdfrobsomd093"
+    },
+    {
+      "applivspe": "ASDFDSU938493",
+      "serveur":"eurfzefzeobsdfsdf93"
+    }
   ]
 }

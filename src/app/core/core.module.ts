@@ -9,6 +9,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FunctionParamModule } from '../function-param/function-param.module';
 import { RouterModule } from '@angular/router';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+
+
+
 
 
 @NgModule({
@@ -20,7 +24,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule, 
     RouterModule,
-    FunctionParamModule
+    FunctionParamModule,
+    NgMultiSelectDropDownModule
   ],
   exports: [
     ResultModule,

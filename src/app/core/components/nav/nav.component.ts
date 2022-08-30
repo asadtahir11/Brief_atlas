@@ -11,19 +11,27 @@ import { NavService } from 'src/app/core/services/nav.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  public collection$: BehaviorSubject<ListFunction[]>;
-
+  public listFunction$: BehaviorSubject<ListFunction[]>;
+  selectedFunction! : number;
+  infoConfId! : number;
+  lastInstId! : number;
+  
   constructor(
     private navService: NavService,
     private router: Router
   ) { 
-    this.collection$ = this.navService.getBehaviorCollection();
+    this.listFunction$ = this.navService.getBehaviorCollection();
     this.navService.refreshCollection();
   }
-
+  
   ngOnInit(): void {
-    console.log('test1',this.collection$);
+    this.lastInstId = 1;
+    this.infoConfId = 2;
   }
-
-
+  
+  changeFunction(e:any){
+    console.log(e.target.value);
+    this.selectedFunction = e.target.value;
+  }
+  
 }

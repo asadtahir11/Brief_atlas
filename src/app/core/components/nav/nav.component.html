@@ -1,5 +1,6 @@
 <div class="container">
-<ul class="nav flex-column" *ngIf="collection$ | async as collection">
+
+<!-- <ul class="nav flex-column" *ngIf="collection$ | async as collection">
   <li class="nav-item">
       <form>
         <select size="1">
@@ -11,7 +12,19 @@
       <p>description</p>
       <p *ngFor="let item of collection"> {{item.description}}</p>
   </li>
-</ul>
-<app-info-conf></app-info-conf>
+</ul> -->
+
+<div class="col-sm-10">
+  <select name="listFunction" (change)="changeFunction($event)" class="form-control">
+    <option>--Select function--</option>
+    <option [value]="item.id" *ngFor="let item of listFunction$ | async">{{item.name}}</option>
+  </select>
+</div>
+<span *ngIf="selectedFunction">description </span> 
+<div *ngFor="let item of listFunction$ | async" >
+ <p *ngIf="item.id == selectedFunction"> {{item.description}}</p>
+</div>
+<app-last-inst *ngIf="selectedFunction == lastInstId"></app-last-inst>
+<app-info-conf *ngIf="selectedFunction == infoConfId"></app-info-conf>
 </div>
 

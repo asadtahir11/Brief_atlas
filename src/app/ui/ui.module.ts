@@ -11,7 +11,7 @@ import { CoreModule } from '../core/core.module';
     UiComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     UiComponent,
