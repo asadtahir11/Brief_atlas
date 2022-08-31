@@ -1,30 +1,26 @@
 <div class="container">
-
-<!-- <ul class="nav flex-column" *ngIf="collection$ | async as collection">
-  <li class="nav-item">
-      <form>
-        <select size="1">
-        <option *ngFor="let item of collection">{{item.name}}
+<div class="nav">
+     <div class="col-sm-10" id="selectFunction">
+         <select name="listFunction" (change)="changeFunction($event)" class="form-control">
+         <option>--Select function--</option>
+         <option [value]="item.id" *ngFor="let item of listFunction$ | async">{{item.name}}</option>
         </select>
-      </form>
-  </li>
-  <li class="nav-item">
-      <p>description</p>
-      <p *ngFor="let item of collection"> {{item.description}}</p>
-  </li>
-</ul> -->
+     </div>
+   <h5 class="span" *ngIf="selectedFunction">Description </h5> 
+  <div *ngFor="let item of listFunction$ | async" >
+      <p *ngIf="item.id == selectedFunction"> {{item.description}}</p>
+  </div>
 
-<div class="col-sm-10">
-  <select name="listFunction" (change)="changeFunction($event)" class="form-control">
-    <option>--Select function--</option>
-    <option [value]="item.id" *ngFor="let item of listFunction$ | async">{{item.name}}</option>
-  </select>
-</div>
-<span *ngIf="selectedFunction">description </span> 
-<div *ngFor="let item of listFunction$ | async" >
- <p *ngIf="item.id == selectedFunction"> {{item.description}}</p>
-</div>
-<app-last-inst *ngIf="selectedFunction == lastInstId"></app-last-inst>
-<app-info-conf *ngIf="selectedFunction == infoConfId"></app-info-conf>
-</div>
+  <div class="description" *ngIf="selectedFunction">
+    <app-icon-parametre ></app-icon-parametre>
+    Paramètres
+  </div>
+  
+  <div class="functionParam">
 
+    <app-last-inst *ngIf="selectedFunction == lastInstId" ></app-last-inst>
+    <app-info-conf *ngIf="selectedFunction == infoConfId" ></app-info-conf>
+  </div>
+
+</div>
+</div>

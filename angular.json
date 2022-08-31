@@ -34,9 +34,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/scss/bootstrap.min.scss",
+              "node_modules/ng-multiselect-dropdown/themes/ng-multiselect-dropdown.theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -110,5 +114,7 @@
       }
     }
   },
-  "defaultProject": "angular-crm-novembre-atos"
+  "cli": {
+    "analytics": false
+  }
 }

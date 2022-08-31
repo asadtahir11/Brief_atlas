@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="col-sm-10">
     <label for="infoServer">assad</label>
       <select name="infoServer" (change)="changeValue($event)" class="form-control">
@@ -11,5 +11,35 @@
         <option [value]="item.applivspe" *ngFor="let item of infoServer$ | async">{{item.applivspe}}</option>
       </select>
     </div>
-</div>
-    
+</div> -->
+
+<form [formGroup]="submitForm" (ngSubmit)="submit()">
+   <label for="param2">Serveur</label>
+   <ng-multiselect-dropdown
+       formControlName="serveur"
+       [settings]="dropdownSettings"
+       [placeholder]="'serveur'"
+       [data]="param2List"
+       (onSelect)="onItemSelect($event)"
+       (onSelectAll)="onSelectAll($event)"
+       name="param2"
+       class="param"
+    ></ng-multiselect-dropdown>
+
+   <label for="param1">Application</label>
+   <ng-multiselect-dropdown
+   formControlName="application"
+   [settings]="dropdownSettings"
+   [placeholder]="'application'"
+   [data]="param1List"
+   (onSelect)="onItemSelect($event)"
+   (onSelectAll)="onSelectAll($event)"
+   name="param1"
+   class="param"
+   ></ng-multiselect-dropdown>
+   <label for="limit">Limit </label> <br>
+   <input id="limit" type="text" formControlName="limit"><br>
+   <button>Submit</button> 
+</form>
+
+

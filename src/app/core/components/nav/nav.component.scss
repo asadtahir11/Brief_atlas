@@ -1,3 +1,24 @@
 .active {
     background: var(--app-light);
 }
+.container {
+    height: 846px;
+}
+
+.nav {
+    margin-left: 50px;
+    .description {
+        margin-top: 70px;
+        margin-left: 80px;
+    }
+    .functionParam {
+        margin-top: 50px;
+        margin-left: 35px;
+    }
+}
+
+#selectFunction {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+

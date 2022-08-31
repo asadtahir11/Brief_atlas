@@ -10,6 +10,8 @@ import { NavComponent } from './components/nav/nav.component';
 import { FunctionParamModule } from '../function-param/function-param.module';
 import { RouterModule } from '@angular/router';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormBuilder, FormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +27,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     CommonModule, 
     RouterModule,
     FunctionParamModule,
-    NgMultiSelectDropDownModule
+    NgMultiSelectDropDownModule.forRoot(),
+    IconsModule
   ],
   exports: [
     ResultModule,

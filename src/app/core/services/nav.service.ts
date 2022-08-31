@@ -31,7 +31,7 @@ export class NavService {
   }
 
   public refreshInfoServer(): void {
-    this.http.get<InfoServer[]>(`${this.url}/infoServer`).pipe(
+    this.http.get<InfoServer[]>(`${this.url}/servers`).pipe(
       map((tabJson) => {
         return tabJson.map(objet => new InfoServer(objet))
       })
@@ -40,16 +40,16 @@ export class NavService {
     });
   }
 
-  // getListFunction():Observable<any[]>{
-  //   return this.http.get<any>(this.url+'/listFunction');
-  // }
-
+  
   public getBehaviorCollection(): BehaviorSubject<ListFunction[]> {
     return this.collection$;
   }
-
+  
   public getBehaviorInfoServer(): BehaviorSubject<InfoServer[]> {
     return this.infoServer$;
   }
-
+  
+  getInfoConf():Observable<any[]>{
+    return this.http.get<any[]>(this.url+'/infoConf', { responseType: "json" });
+  }
 }

@@ -1,0 +1,21 @@
+<div class="container text-center mt-4">
+    <table class="table table-striped table-bordered table-sm row-border hover" id="datatableexample">
+      <thead>
+        <tr>
+          <th>pays</th>
+          <th>origine</th>
+          <th>region</th>
+          <th>serveur Title</th>
+          </tr>
+      </thead>
+      <tbody>
+          
+              <tr *ngFor="let data of data$ | async">
+                  <td>{{data.pays}}</td>
+                  <td>{{data.origine}}</td>
+                  <td>{{data.region}}</td>
+                  <td>{{data.serveur}}</td>
+              </tr>
+      </tbody>
+    </table>
+    </div>
