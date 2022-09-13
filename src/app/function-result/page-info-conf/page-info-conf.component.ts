@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NavService } from 'src/app/core/services/nav.service';
 
+
 @Component({
   selector: 'app-page-info-conf',
   templateUrl: './page-info-conf.component.html',
@@ -10,6 +11,7 @@ import { NavService } from 'src/app/core/services/nav.service';
 export class PageInfoConfComponent implements OnInit {
 
   data$!: Observable<any[]>;
+  searchText = "";
 
   public datas : any[] = [];
 
@@ -25,5 +27,21 @@ export class PageInfoConfComponent implements OnInit {
   fetchAll(): Observable<any[]> {
     return this.navService.getInfoConf();   
   }
+
+  // Search(){
+  //   // alert(this.searchText)
+  //    if(this.searchText!== ""){
+  //      let searchValue = this.searchText.toLocaleLowerCase();
+      
+  //      this.data$ = this.data$.filter((contact:any) =>{
+  //        return contact.name.toLocaleLowerCase().match(searchValue )
+  //        ;
+  //      // you can keep on adding object properties here   
+       
+  //            });
+             
+  //            console.log(this.data$);
+  //          }
+  //    }
 
 }

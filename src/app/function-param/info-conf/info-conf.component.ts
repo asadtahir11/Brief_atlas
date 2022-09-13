@@ -40,6 +40,8 @@ export class InfoConfComponent implements OnInit {
   
   ngOnInit(): void {
 
+    
+
     this.submitForm = new FormGroup({
       serveur:new FormControl('', Validators.required),
       application:new FormControl('', Validators.required),
@@ -53,7 +55,7 @@ export class InfoConfComponent implements OnInit {
       textField: 'item_text',
       selectAllText: 'Select All',
       unSelectAllText: 'UnSelect All',
-      itemsShowLimit: 2,
+      itemsShowLimit: 1,
       allowSearchFilter: true,
       noFilteredDataAvailablePlaceholderText: 'Aucun résultat',
     };    
@@ -85,7 +87,7 @@ export class InfoConfComponent implements OnInit {
     });
   }
   
-  submit (){
+  onSubmit (){
     console.log('reactive form value2',this.submitForm.value);  
     this.router.navigate(['function/infoconf']);
   }

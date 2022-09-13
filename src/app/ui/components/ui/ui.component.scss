@@ -18,11 +18,11 @@ aside {
   min-height: 100vh;
   position: fixed;
   z-index: 1000;
-  .scroller {
-    overflow-y: auto;
-    max-height: 100vh;
-    padding-bottom: 65px;
-  }
+  // .scroller {
+  //   overflow-y: auto;
+  //   max-height: 100vh;
+  //   padding-bottom: 65px;
+  // }
 }
 .close-aside aside {
   width: 0;

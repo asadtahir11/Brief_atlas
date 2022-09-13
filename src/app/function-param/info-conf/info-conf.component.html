@@ -1,4 +1,5 @@
-<div class="container infoconf"><!-- <div class="container">
+<div class="container infoconf">
+  <!-- <div class="container">
     <div class="col-sm-10">
     <label for="infoServer">assad</label>
       <select name="infoServer" (change)="changeValue($event)" class="form-control">
@@ -13,12 +14,12 @@
     </div>
 </div> -->
 
-<form [formGroup]="submitForm" (ngSubmit)="submit()">
+<form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
    <label for="param2">Serveur</label>
    <ng-multiselect-dropdown
        formControlName="serveur"
        [settings]="dropdownSettings"
-       [placeholder]="'serveur'"
+       [placeholder]="''"
        [data]="param2List"
        (onSelect)="onItemSelect($event)"
        (onSelectAll)="onSelectAll($event)"
@@ -26,20 +27,20 @@
        class="param"
     ></ng-multiselect-dropdown>
 
-   <label for="param1">Application</label>
-   <ng-multiselect-dropdown
-   formControlName="application"
-   [settings]="dropdownSettings"
-   [placeholder]="'application'"
-   [data]="param1List"
-   (onSelect)="onItemSelect($event)"
-   (onSelectAll)="onSelectAll($event)"
-   name="param1"
-   class="param"
-   ></ng-multiselect-dropdown>
-   <label for="limit">Limit </label> 
+     <label for="param1">Application</label>
+      <ng-multiselect-dropdown
+       formControlName="application"
+       [settings]="dropdownSettings"
+      [placeholder]="''"
+      [data]="param1List"
+      (onSelect)="onItemSelect($event)"
+      (onSelectAll)="onSelectAll($event)"
+      name="param1"
+      class="param"
+      ></ng-multiselect-dropdown>
+      <label for="limit">Limit </label> 
    <div class="input-group input-group-sm mb-3">
-    <input type="text" formControlName="limit"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <input type="number" formControlName="limit"  class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
   </div>
    <button>Submit</button>
 </form>
